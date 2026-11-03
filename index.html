@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>IIIT Vadodara Coding Events</title>
+
+  <meta name="description"
+    content="Upcoming coding events, event categories and event submission information for IIIT Vadodara students.">
+
+  <link rel="icon" href="campus.jpg.jpeg" type="image/jpeg">
+
+  <meta property="og:title" content="IIIT Vadodara Coding Events">
+  <meta property="og:description"
+    content="Explore upcoming coding events and submit a new event at IIIT Vadodara.">
+  <meta property="og:image" content="campus-event.jpg">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Skip link -->
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+
+    <div class="header-logo">
+      <img src="favicon.jpeg" alt="IIIT Vadodara Logo">
+    </div>
+
+    <div class="header-content">
+      <span class="eyebrow">IIIT VADODARA • STUDENT COMMUNITY</span>
+
+      <h1>Campus Coding Events</h1>
+
+      <p>
+        <em>
+          Learn, build, compete and grow together through coding.
+        </em>
+      </p>
+    </div>
+
+  </header>
+
+  <!-- ================= NAVIGATION ================= -->
+  <nav class="main-nav" aria-label="Main navigation">
+
+    <!-- Hamburger button (B4: Dynamic JS Toggle) -->
+    <button class="menu-button" id="menu-toggle" type="button" aria-label="Open navigation">
+      ☰
+    </button>
+
+    <div class="nav-links" id="nav-links">
+
+      <a href="#events" class="active">Upcoming Events</a>
+
+      <a href="#xml-data">XML Reader</a>
+
+      <a href="#submit-event">Submit an Event</a>
+
+      <a href="#categories">Categories</a>
+
+      <a href="#faq">FAQ</a>
+
+      <a href="#contact">Contact</a>
+
+      <a
+        href="https://www.iiitvadodara.ac.in"
+        target="_blank"
+        rel="noopener">
+        IIIT Vadodara ↗
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- ================= PAGE GRID ================= -->
+  <div class="page-grid">
+
+    <!-- ================= MAIN ================= -->
+    <main id="main">
+
+      <!-- ================= HERO ================= -->
+      <section class="hero-section">
+
+        <div class="hero-content">
+
+          <span class="hero-label">PROGRAMMING • TECHNOLOGY • INNOVATION</span>
+
+          <h2>Build Skills. Solve Problems. Create Impact.</h2>
+
+          <p>
+            Discover coding competitions, hackathons and technical
+            workshops designed to help IIIT Vadodara students
+            strengthen their programming and problem-solving skills.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#events" class="primary-button">
+              Explore Events
+            </a>
+
+            <a href="#submit-event" class="secondary-button">
+              Submit Event
+            </a>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ================= EVENTS SECTION (LAB 6 & 7 DYNAMIC RENDER) ================= -->
+      <section class="events" id="events">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="section-label">WHAT'S HAPPENING</span>
+
+            <h2>Upcoming Coding Events</h2>
+          </div>
+
+          <p>
+            Participate, collaborate and improve your coding skills.
+          </p>
+
+        </div>
+
+        <!-- B6: Search & Filter Box -->
+        <div class="search-container" style="margin-bottom: 1.5rem;">
+          <input type="search" id="search-input" placeholder="🔍 Search events by title or keywords... (Press Esc to clear)" style="width: 100%; padding: 0.85rem 1.25rem; border-radius: 9999px; border: 2px solid #38bdf8; background: #ffffff;">
+        </div>
+
+        <div class="event-image">
+          <span>Coding Activities at IIIT Vadodara</span>
+        </div>
+
+        <figcaption>
+          Students taking part in coding activities at IIIT Vadodara.
+        </figcaption>
+
+        <!-- B7: Fetch Status Banner (Loading / Error / Success) -->
+        <div id="fetch-status" class="status-message"></div>
+
+        <!-- B2: Dynamic Event Cards Grid Populated via JS -->
+        <div class="event-grid" id="events-container">
+          <!-- Cards rendered dynamically from events.json via script.js -->
+        </div>
+
+      </section>
+
+      <!-- ================= LAB 7: XML DATA READER SECTION ================= -->
+      <section class="xml-section" id="xml-data">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">LAB 7 DEMO</span>
+            <h2>XML Data Integration</h2>
+          </div>
+          <p>Demonstrating parsing XML using DOMParser (Assignment 7 B4).</p>
+        </div>
+
+        <div style="background: #ffffff; padding: 1.5rem; border-radius: 0.875rem; border: 1.5px solid #cbd5e1; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+          <h3>XML Parser Output:</h3>
+          <p><strong>First Event Title (from events.xml):</strong> <span id="xml-first-title" style="color: #6366f1; font-weight: bold;">Loading XML...</span></p>
+        </div>
+      </section>
+
+      <!-- ================= SUBMIT EVENT ================= -->
+      <section class="submit-event" id="submit-event">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="section-label">GET INVOLVED</span>
+
+            <h2>Submit an Event</h2>
+          </div>
+
+          <p>
+            Have an idea for a coding activity? Share it with the
+            student community.
+          </p>
+
+        </div>
+
+        <form action="#" method="post" id="rsvp-form" novalidate>
+
+          <fieldset>
+
+            <legend>New Event Details</legend>
+
+            <div class="form-grid">
+
+              <p>
+                <label for="event-name">Event Name</label>
+
+                <input
+                  type="text"
+                  id="event-name"
+                  name="event-name"
+                  minlength="3"
+                  maxlength="60"
+                  placeholder="Enter event name"
+                  required>
+              </p>
+
+              <p>
+                <label for="event-date">Date</label>
+
+                <input
+                  type="date"
+                  id="event-date"
+                  name="event-date"
+                  min="2026-09-01"
+                  required>
+              </p>
+
+              <p>
+                <label for="location">Location</label>
+
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  minlength="3"
+                  maxlength="80"
+                  placeholder="Enter event location"
+                  required>
+              </p>
+
+              <p>
+                <label for="category">Event Category</label>
+
+                <select id="category" name="category" required>
+
+                  <option value="">
+                    Select a category
+                  </option>
+
+                  <option value="coding-contest">
+                    Coding Contest
+                  </option>
+
+                  <option value="hackathon">
+                    Hackathon
+                  </option>
+
+                  <option value="technical-workshop">
+                    Technical Workshop
+                  </option>
+
+                </select>
+              </p>
+
+            </div>
+
+            <p>
+              <label for="email">Contact Email</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@iiitvadodara.ac.in"
+                required>
+            </p>
+
+            <p>
+              <label for="description">Description</label>
+
+              <textarea
+                id="description"
+                name="description"
+                rows="5"
+                minlength="10"
+                maxlength="300"
+                placeholder="Enter a short event description"
+                required></textarea>
+            </p>
+
+            <button type="submit" class="submit-button">
+              Add Event →
+            </button>
+
+          </fieldset>
+
+        </form>
+
+      </section>
+
+      <!-- ================= CATEGORIES ================= -->
+      <section class="categories" id="categories">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="section-label">WEEKLY SCHEDULE</span>
+
+            <h2>Event Categories</h2>
+          </div>
+
+          <p>
+            Regular activities to keep your programming skills active.
+          </p>
+
+        </div>
+
+        <div class="table-wrapper">
+
+          <table>
+
+            <caption>
+              Weekly event categories and their meeting days
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Event Category</th>
+                <th scope="col">Meeting Day</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>Coding Contest</td>
+                <td>Monday</td>
+              </tr>
+
+              <tr>
+                <td>Hackathon</td>
+                <td>Wednesday</td>
+              </tr>
+
+              <tr>
+                <td>Technical Workshop</td>
+                <td>Friday</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+      <!-- ================= FAQ ================= -->
+      <section class="faq" id="faq">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="section-label">NEED HELP?</span>
+
+            <h2>Frequently Asked Questions</h2>
+          </div>
+
+        </div>
+
+        <details>
+          <summary>
+            Who can participate in the coding events?
+          </summary>
+
+          <p>
+            IIIT Vadodara students interested in programming
+            and technology can participate according to the
+            event requirements.
+          </p>
+        </details>
+
+        <details>
+          <summary>
+            How can I prepare for a coding contest?
+          </summary>
+
+          <p>
+            Students can practise
+            <code>problem solving</code>,
+            algorithms and data structures regularly.
+          </p>
+        </details>
+
+      </section>
+
+    </main>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="useful-information">
+
+      <div class="sidebar-icon">💡</div>
+
+      <span class="section-label">QUICK INFO</span>
+
+      <h2>Useful Information</h2>
+
+      <p>
+        Use the <kbd>Tab</kbd> key to move through links
+        and form fields using the keyboard.
+      </p>
+
+      <p>
+        <abbr title="Indian Institute of Information Technology">
+          IIIT
+        </abbr>
+        Vadodara promotes technical learning through
+        activities and events.
+      </p>
+
+      <p>
+        Our events are designed to support
+        <mark>practical programming skills.</mark>
+      </p>
+
+      <p>
+        The event board follows the guidance of
+        <cite>HTML Living Standard</cite>
+        for meaningful page structure.
+      </p>
+
+    </aside>
+
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="contact">
+
+    <div class="footer-content">
+
+      <section class="contact">
+
+        <span class="section-label">GET IN TOUCH</span>
+
+        <h2>IIIT Vadodara</h2>
+
+        <address>
+
+          C/o Block No. 9 (IC Department)<br>
+          Government Engineering College<br>
+          Sector 28 GIDC, Gandhinagar<br>
+          Gujarat - 382028<br><br>
+
+          Email:
+          <a href="mailto:info@iiitvadodara.ac.in">
+            info@iiitvadodara.ac.in
+          </a>
+
+        </address>
+
+      </section>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+
+        <a href="#events">Events</a>
+
+        <a href="#submit-event">Submit Event</a>
+
+        <a href="#categories">Categories</a>
+
+        <a href="#faq">FAQ</a>
+
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 IIIT Vadodara Coding Events Board
+      </p>
+    </div>
+
+  </footer>
+
+  <!-- Link external JavaScript file before </body> with defer attribute (Lab 6 A1) -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>

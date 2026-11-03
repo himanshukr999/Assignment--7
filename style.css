@@ -1,0 +1,1125 @@
+/* =========================================================
+   IIIT VADODARA CODING EVENTS - MULTI-SECTION VIBRANT MODERN UI
+   Now with an atmospheric, modern tech canvas background!
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Global Base Surfaces */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --max-width: 78rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* =========================================================
+   ADVANCED AMBIENT TECH BACKGROUND
+   Subtle glowing mesh orbs + clean engineering grid overlay
+   ========================================================= */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1e293b;
+  min-height: 100vh;
+  
+  /* Layered Background: Subtle Tech Grid + Aurora Mesh Glows */
+  background-color: #f1f5f9;
+  background-image:
+    /* Engineering Micro-Grid */
+    linear-gradient(rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    /* Soft ambient color glows across sections */
+    radial-gradient(ellipse 65% 50% at 10% 25%, rgba(99, 102, 241, 0.12), transparent 70%),
+    radial-gradient(ellipse 55% 45% at 90% 45%, rgba(14, 165, 233, 0.13), transparent 70%),
+    radial-gradient(ellipse 60% 50% at 20% 75%, rgba(225, 29, 72, 0.08), transparent 70%),
+    radial-gradient(ellipse 50% 45% at 80% 90%, rgba(16, 185, 129, 0.11), transparent 70%);
+  background-size:
+    36px 36px,
+    36px 36px,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  max-width: 65ch;
+}
+
+/* =========================================================
+   SKIP LINK
+   ========================================================= */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0.75rem;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  color: #ffffff;
+  background: #6366f1;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.skip:focus {
+  left: 0.75rem;
+}
+
+/* =========================================================
+   1. HEADER: MIDNIGHT OBSIDIAN & ELECTRIC AMBER GLOW
+   ========================================================= */
+.site-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 23rem;
+  padding: 3.5rem 1.5rem;
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff;
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.18), transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.22), transparent 50%),
+    linear-gradient(135deg, #0b0f19 0%, #111827 50%, #1e1b4b 100%);
+  border-bottom: 3px solid #f59e0b;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  top: -10rem;
+  right: -5rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.25), transparent 70%);
+  filter: blur(40px);
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  bottom: -6rem;
+  left: -3rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.2), transparent 70%);
+  filter: blur(35px);
+}
+
+.header-logo {
+  position: absolute;
+  left: 3.5rem;
+  top: 2.5rem;
+  width: 6.8rem;
+  height: 6.8rem;
+  z-index: 2;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.45rem;
+  background: #ffffff;
+  border: 3px solid #f59e0b;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  width: min(92%, 60rem);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  margin-bottom: 0.75rem;
+  color: #fbbf24;
+  text-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+
+.header-content h1 {
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.header-content p {
+  margin: 0 auto;
+  color: #cbd5e1;
+  font-size: 1.15rem;
+}
+
+/* =========================================================
+   2. NAVBAR: DEEP SPACE SLATE & NEON ACCENTS
+   ========================================================= */
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 15, 25, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.75rem;
+}
+
+.nav-links a {
+  padding: 0.7rem 1.25rem;
+  color: #cbd5e1;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background: rgba(255, 255, 255, 0.1);
+  color: #38bdf8;
+  transform: translateY(-1px);
+}
+
+.nav-links a.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.nav-links a[href^="https"]::after {
+  content: " ↗";
+  font-weight: 800;
+}
+
+.menu-button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  color: #ffffff;
+  background: transparent;
+  border: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* =========================================================
+   PAGE GRID LAYOUT
+   ========================================================= */
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "main"
+    "sidebar";
+  gap: 2.5rem;
+  width: min(92%, 78rem);
+  margin: 0 auto;
+  padding: 3.5rem 0;
+}
+
+main {
+  grid-area: main;
+  min-width: 0;
+}
+
+.useful-information {
+  grid-area: sidebar;
+}
+
+/* =========================================================
+   3. HERO: VIBRANT ELECTRIC INDIGO & VIOLET AURORA
+   ========================================================= */
+.hero-section {
+  position: relative;
+  margin-bottom: 3.5rem;
+  padding: 3.8rem 2.8rem;
+  overflow: hidden;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4338ca 0%, #6366f1 45%, #8b5cf6 85%, #ec4899 100%);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 18px 40px -10px rgba(99, 102, 241, 0.45);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.25), transparent 50%);
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  right: -5rem;
+  bottom: -6rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.35), transparent 70%);
+  filter: blur(20px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 46rem;
+}
+
+.hero-label {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.hero-content h2 {
+  max-width: 15ch;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  color: #f1f5f9;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.primary-button {
+  display: inline-block;
+  padding: 0.9rem 1.7rem;
+  border-radius: 9999px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #1e1b4b;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+
+.primary-button:hover {
+  background: #fef08a;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.secondary-button {
+  display: inline-block;
+  padding: 0.9rem 1.7rem;
+  border-radius: 9999px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+}
+
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   SECTION TITLES & LABELS
+   ========================================================= */
+section {
+  margin-bottom: 4rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  margin: 0.35rem 0 0;
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+/* =========================================================
+   4. EVENTS SECTION: CYAN / TEAL & COLOR-CODED UNIQUE CARDS
+   ========================================================= */
+#events .section-label {
+  color: #0284c7;
+}
+
+#events .section-heading h2 {
+  color: #0369a1;
+}
+
+.event-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 15rem;
+  margin-bottom: 0.5rem;
+  padding: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  background:
+    radial-gradient(circle at center, rgba(14, 165, 233, 0.3), transparent 70%),
+    linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(3, 105, 161, 0.9)),
+    url("campus-event.jpg") center / cover;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.2);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+figcaption {
+  margin-bottom: 2.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.75rem;
+}
+
+.event-card {
+  position: relative;
+  padding: 2rem 1.6rem;
+  margin: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+}
+
+.card-number {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  opacity: 0.18;
+}
+
+.event-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 1.75rem;
+}
+
+.event-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+}
+
+.event-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.event-card ul {
+  padding: 0;
+  margin: 0 0 1.25rem;
+  list-style: none;
+}
+
+.event-card li {
+  padding: 0.4rem 0;
+  color: #475569;
+  border-bottom: 1px dashed #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.event-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.card-link:hover {
+  transform: translateX(4px);
+}
+
+/* Unique Card 1: Electric Blue / Cyan */
+.event-card:nth-child(1) {
+  border-color: #bae6fd;
+}
+.event-card:nth-child(1) .card-number { color: #0284c7; }
+.event-card:nth-child(1) .event-icon { background: #e0f2fe; }
+.event-card:nth-child(1) .event-tag { background: #e0f2fe; color: #0369a1; }
+.event-card:nth-child(1) h3 { color: #0369a1; }
+.event-card:nth-child(1) .card-link { color: #0284c7; }
+.event-card:nth-child(1):hover {
+  border-color: #0284c7;
+  box-shadow: 0 16px 32px rgba(2, 132, 199, 0.2);
+}
+
+/* Unique Card 2: Cyber Purple / Violet */
+.event-card:nth-child(2) {
+  border-color: #e9d5ff;
+}
+.event-card:nth-child(2) .card-number { color: #7c3aed; }
+.event-card:nth-child(2) .event-icon { background: #f3e8ff; }
+.event-card:nth-child(2) .event-tag { background: #f3e8ff; color: #6d28d9; }
+.event-card:nth-child(2) h3 { color: #5b21b6; }
+.event-card:nth-child(2) .card-link { color: #7c3aed; }
+.event-card:nth-child(2):hover {
+  border-color: #7c3aed;
+  box-shadow: 0 16px 32px rgba(124, 58, 237, 0.2);
+}
+
+/* Unique Card 3: Radiant Orange / Coral Amber */
+.event-card:nth-child(3) {
+  border-color: #fed7aa;
+}
+.event-card:nth-child(3) .card-number { color: #ea580c; }
+.event-card:nth-child(3) .event-icon { background: #ffedd5; }
+.event-card:nth-child(3) .event-tag { background: #ffedd5; color: #c2410c; }
+.event-card:nth-child(3) h3 { color: #9a3412; }
+.event-card:nth-child(3) .card-link { color: #ea580c; }
+.event-card:nth-child(3):hover {
+  border-color: #ea580c;
+  box-shadow: 0 16px 32px rgba(234, 88, 12, 0.2);
+}
+
+/* =========================================================
+   5. SUBMIT EVENT SECTION: SUNSET CORAL / ROSE PINK
+   ========================================================= */
+#submit-event .section-label {
+  color: #e11d48;
+}
+
+#submit-event .section-heading h2 {
+  color: #be123c;
+}
+
+#submit-event fieldset {
+  padding: 2.5rem 2rem;
+  background: #ffffff;
+  border: 2px solid #fecdd3;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 12px 30px rgba(225, 29, 72, 0.1);
+}
+
+#submit-event legend {
+  padding: 0.35rem 1rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #e11d48, #be123c);
+  font-size: 1.15rem;
+  font-weight: 800;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  color: #0f172a;
+  background: #fff1f2;
+  border: 1.5px solid #fecdd3;
+  border-radius: var(--radius-md);
+  font: inherit;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #e11d48;
+  box-shadow: 0 0 0 4px rgba(225, 29, 72, 0.18);
+}
+
+input[type="email"],
+input[type="date"] {
+  border-left: 5px solid #e11d48;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.submit-button {
+  display: inline-block;
+  padding: 0.95rem 2rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  border: 0;
+  border-radius: 9999px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(225, 29, 72, 0.35);
+  transition: var(--transition);
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(225, 29, 72, 0.45);
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 100%);
+}
+
+/* =========================================================
+   6. CATEGORIES SCHEDULE: EMERALD / TEAL SPECTRUM
+   ========================================================= */
+#categories .section-label {
+  color: #059669;
+}
+
+#categories .section-heading h2 {
+  color: #065f46;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #a7f3d0;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 30px rgba(5, 150, 105, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  padding: 1.25rem;
+  color: #065f46;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-align: left;
+  background: #ecfdf5;
+  border-bottom: 2px solid #a7f3d0;
+}
+
+th,
+td {
+  padding: 1.1rem 1.4rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  color: #ffffff;
+  background: linear-gradient(135deg, #059669, #047857);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+tbody tr {
+  transition: var(--transition);
+}
+
+tbody tr:nth-child(even) {
+  background: #f0fdf4;
+}
+
+tbody tr:hover {
+  background: #dcfce7;
+  transform: scale(1.005);
+}
+
+tbody td:first-child {
+  font-weight: 700;
+  color: #065f46;
+}
+
+tbody td:last-child {
+  font-weight: 600;
+  color: #047857;
+}
+
+/* =========================================================
+   7. FAQ ACCORDION: ROYAL PURPLE / VIOLET CARDS
+   ========================================================= */
+#faq .section-label {
+  color: #7c3aed;
+}
+
+#faq .section-heading h2 {
+  color: #5b21b6;
+}
+
+details {
+  margin: 1rem 0;
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  border: 1.5px solid #ede9fe;
+  border-left: 5px solid #8b5cf6;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.08);
+  transition: var(--transition);
+}
+
+details:hover {
+  border-color: #c4b5fd;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.14);
+  transform: translateX(4px);
+}
+
+details[open] {
+  background: #faf5ff;
+  border-left-color: #7c3aed;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.16);
+}
+
+summary {
+  color: #4c1d95;
+  font-weight: 800;
+  font-size: 1.05rem;
+  cursor: pointer;
+  outline: none;
+}
+
+details p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  color: #581c87;
+  line-height: 1.7;
+}
+
+details code {
+  background: #ede9fe;
+  color: #6d28d9;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   8. SIDEBAR: GOLDEN AMBER & HONEY SUNSHINE
+   ========================================================= */
+.useful-information {
+  align-self: start;
+  padding: 2rem 1.75rem;
+  background: linear-gradient(145deg, #fffbeb 0%, #fef3c7 100%);
+  border: 2px solid #fde68a;
+  border-left: 6px solid #f59e0b;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.14);
+}
+
+.sidebar-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.useful-information .section-label {
+  color: #b45309;
+}
+
+.useful-information h2 {
+  margin: 0.25rem 0 1.25rem;
+  color: #78350f;
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.useful-information p {
+  color: #92400e;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+mark {
+  padding: 0.2rem 0.5rem;
+  background: #f59e0b;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+kbd {
+  padding: 0.2rem 0.5rem;
+  color: #ffffff;
+  background: #78350f;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+abbr {
+  text-decoration: underline dotted #b45309;
+  font-weight: 800;
+  color: #78350f;
+}
+
+cite {
+  font-weight: 700;
+  color: #92400e;
+}
+
+/* =========================================================
+   9. FOOTER: DEEP COSMIC SLATE & NEON ACCENTS
+   ========================================================= */
+footer {
+  color: #ffffff;
+  background: linear-gradient(180deg, #0f172a 0%, #090d16 100%);
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, #6366f1, #ec4899, #f59e0b, #10b981) 1;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  width: min(92%, 78rem);
+  margin: 0 auto;
+  padding: 4rem 0 3.5rem;
+}
+
+footer .section-label {
+  color: #38bdf8;
+}
+
+footer h2 {
+  margin-top: 0.4rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+footer address {
+  color: #94a3b8;
+  font-style: normal;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: #ec4899;
+  text-decoration: underline;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.footer-nav a {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  transition: var(--transition);
+}
+
+.footer-nav a:hover {
+  color: #f59e0b;
+  transform: translateX(4px);
+}
+
+.footer-bottom {
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom p {
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   MEDIA QUERIES FOR RESPONSIVE DESIGN
+   ========================================================= */
+@media (min-width: 40rem) {
+  .menu-button {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .nav-links a {
+    width: auto;
+  }
+
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (min-width: 64rem) {
+  .page-grid {
+    grid-template-columns: minmax(0, 1fr) 20rem;
+    grid-template-areas: "main sidebar";
+    align-items: start;
+    gap: 3rem;
+  }
+
+  .site-header {
+    min-height: 25rem;
+  }
+
+  .header-logo {
+    left: 4.5rem;
+    top: 3.5rem;
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media (max-width: 39.99rem) {
+  .header-logo {
+    left: 50%;
+    top: 1.5rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    transform: translateX(-50%);
+  }
+
+  .site-header {
+    min-height: 22rem;
+    padding-top: 8rem;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading p {
+    margin-top: 0.75rem;
+  }
+
+  .hero-section {
+    padding: 2.2rem 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    text-align: center;
+  }
+
+  #submit-event fieldset {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+
+/* Additional Styles for Lab 6 & Lab 7 Interactive Features */
+.nav-links.nav-active {
+  display: flex !important;
+}
+
+.status-message {
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  text-align: center;
+}
+
+.status-message.loading {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #7dd3fc;
+}
+
+.status-message.error {
+  background: #ffe4e6;
+  color: #be123c;
+  border: 1px solid #fca5a5;
+}
+
+.card-status {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+.status-full {
+  background: #ffe4e6;
+  color: #e11d48;
+}
+
+.status-few {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.status-open {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.event-card.full {
+  opacity: 0.85;
+  border-color: #f43f5e !important;
+}
+
+.rsvp-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 9999px;
+  background: #6366f1;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.rsvp-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.rsvp-btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}

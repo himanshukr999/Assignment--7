@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "CodeFest 2026",
+    "date": "2026-08-22",
+    "seats": 15,
+    "free": true,
+    "online": false,
+    "category": "coding-contest",
+    "location": "Computer Lab",
+    "description": "CodeFest gives students an opportunity to solve programming problems and improve their coding skills."
+  },
+  {
+    "id": 2,
+    "title": "Hackathon 2026",
+    "date": "2026-08-29",
+    "seats": 4,
+    "free": true,
+    "online": false,
+    "category": "hackathon",
+    "location": "Computer Lab",
+    "description": "Students work in teams to create useful solutions and present their innovative ideas."
+  },
+  {
+    "id": 3,
+    "title": "Competitive Programming Contest",
+    "date": "2026-09-05",
+    "seats": 0,
+    "free": true,
+    "online": true,
+    "category": "coding-contest",
+    "location": "Online (Discord / CodeChef)",
+    "description": "Practise algorithms, data structures, problem solving and programming under competition conditions."
+  },
+  {
+    "id": 4,
+    "title": "AI & Web Development Workshop",
+    "date": "2026-09-12",
+    "seats": 25,
+    "free": false,
+    "online": true,
+    "category": "technical-workshop",
+    "location": "Seminar Hall / Zoom",
+    "description": "Hands-on workshop on integrating AI APIs into modern full-stack web applications."
+  }
+]
